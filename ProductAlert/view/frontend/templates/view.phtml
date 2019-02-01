@@ -1,0 +1,22 @@
+<?php
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+$product_id = 0; $block->getCurrentProduct();
+if ($currentProduct = $block->getCurrentProduct()) {
+    $product_id = $currentProduct->getId();
+}
+?>
+<?php /* @var $block \Magento\ProductAlert\Block\Product\View */?>
+<div class="product alert <?= $block->getHtmlClass() ?>">
+ 	<form data-role="outofstock-form" method="post" action='<?= /* @noEscape */ $block->getUrl('productalert/add/stock') ?>'>
+ 		 <?= $block->getBlockHtml('formkey') ?>
+ 		<input type="hidden" name="product_id" value="<?= $product_id;?>">
+        <input type="text" name="customer_email" value="" placeholder="<?= $block->escapeHtml(__('Email Address')) ?>">
+        <button type="submit" title="<?= $block->escapeHtml(__('Waitlist')) ?>" class="action primary">
+        <span><?= /* @escapeNotVerified */ __('Waitlist') ?></span>
+        </button>
+    </form>
+    
+</div>

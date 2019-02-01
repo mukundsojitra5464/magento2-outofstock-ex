@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference for="Magento\ProductAlert\Block\Product\View\Stock" type="Agile\ProductAlert\Block\Product\Stock" />
+    <preference for="Magento\ProductAlert\Controller\Add\Stock" type="Agile\ProductAlert\Controller\Add\Stock" />
+    <preference for="Magento\ProductAlert\Model\Email" type="Agile\ProductAlert\Model\Email" />
+    <preference for="Magento\ProductAlert\Model\Observer" type="Agile\ProductAlert\Model\Observer" />
+     <preference for="Magento\ProductAlert\Model\ResourceModel\Stock\Customer\Collection" type="Agile\ProductAlert\Model\ResourceModel\Stock\Customer\Collection" />
+</config>
